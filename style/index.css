@@ -1,0 +1,132 @@
+body {
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(
+        45deg,
+        #ee7752 25%,
+        #e73c7e 45%,
+        #23a6d5 60%,
+        #23d5ab
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0b2349;
+}
+
+.card {
+    box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004d;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.inputs {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.inputGame {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#gameSection {
+    padding: 40px;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 700px;
+    }
+    .inputs {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #startGame {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 340px;
+    }
+    .titleMain {
+        font-size: 20px;
+    }
+    .inputs {
+        font-size: 14px;
+    }
+    #startGame {
+        font-size: 16px;
+    }
+    .titleMain div {
+        gap: 0 !important;
+    }
+
+    .inputGame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+    #userGuess {
+        width: 75% !important;
+    }
+    #submitGuess {
+        font-size: 16px;
+    }
+    #gameSection {
+        margin-top: 24px !important;
+    }
+}

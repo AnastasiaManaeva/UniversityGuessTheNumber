@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style/index.css">
+        <title>Угадай число!</title>
+    </head>
+    <body>
+        <div id="startSection" class="card container">
+            <h1 class="text-center titleMain gradient-text">Игра "Угадай число"</h1>
+            <div class="d-flex flex-column gap-3 mt-3 align-items-center">
+                <div class="inputs">
+                    <div class="text-center inputContainer">
+                        <label for="rangeA">Введите минимальное число:</label>
+                        <input type="number" id="rangeA" class="form-control w-25 d-inline" tabindex="0">
+                    </div>
+                    <div class="text-center inputContainer">
+                        <label for="rangeB">Введите максимальное число:</label>
+                        <input type="number" id="rangeB" class="form-control w-25 d-inline" tabindex="0">
+                    </div>
+                </div>
+                <p id="warningStart" class="text-center text-danger m-0"></p>
+                <button id="startGame" class="btn btn-outline-primary mt-3" style="width: max-content;" tabindex="0">Начать игру</button>
+            </div>
+        </div>
+    
+        <div id="gameSection" class="card container" style="display: none;">
+            <h2 class="text-center titleMain gradient-text">Попробуйте угадать число!</h2>
+            <div class="d-flex align-items-center justify-content-between">
+                <p id="interval" class="text-start text-secondary mb-0"></p>
+                <button id="restart" class="btn btn-outline-primary" style="width: max-content; height: max-content;" tabindex="0">Начать игру заново</button>
+            </div>
+            <div class="d-flex gap-5 mt-3 justify-content-between">
+                <div class="card" style="box-shadow: none; width: 25%;">
+                    <p class="text-start m-0 fw-bolder">История Ваших попыток: <br/></p>
+                    <p id="historyDel" class="text-secondary m-0 fst-italic">пусто</p>
+                    <ul id="history" class="m-0"></ul>
+                </div>
+                <div>
+                    <div class="inputGame">
+                        <input type="number" id="userGuess" class="form-control w-100 d-inline" placeholder="Введите число" tabindex="0">
+                        <button id="submitGuess" class="btn btn-outline-success" tabindex="0">Проверить</button>
+                    </div>
+                    <p id="warningGame" class="text-center text-danger m-0"></p>
+                    <p id="feedback" class="mt-3 text-center text-secondary"></p>
+                    <p id="attemptsLeft" class="mb-0 text-center"></p>
+                </div>
+                <div class="card" style="box-shadow: none;">
+                    <b>Правила игры:<br/></b>
+                    <span>Вы установили интервал, в котором компьютер загадал число. </span>
+                    <span>Вам нужно отгадать это число. </span>
+                    <span>На это есть log<sub>2</sub>(B-A+1) попыток,</span> 
+                    <span>где В - Ваше максимальное число, </span>
+                    <span>а А - минимальное. </span>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./script/index.js"></script>
+    </body>
+</html>
