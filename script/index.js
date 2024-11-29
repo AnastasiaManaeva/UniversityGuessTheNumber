@@ -91,6 +91,8 @@ document.getElementById('submitGuess').addEventListener('click', function() {
 document.getElementById('restart').addEventListener('click', function() {
     document.getElementById('rangeA').value = '';
     document.getElementById('rangeB').value = '';
+    document.getElementById('userGuess').value = '';
+    document.getElementById('submitGuess').disabled = false;
     document.getElementById('gameSection').style.display = 'none';
     document.getElementById('startSection').style.display = 'block';
     const newParagraph = document.createElement('p');
