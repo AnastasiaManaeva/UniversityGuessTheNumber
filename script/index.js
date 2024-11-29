@@ -61,7 +61,7 @@ document.getElementById('submitGuess').addEventListener('click', function() {
     } else {
         if (userGuess < min || userGuess > max) {
             attempts--;
-            document.getElementById('feedback').textContent = 'Ваше предположение не входит в заданный интервал возможных значений.';
+            document.getElementById('feedback').textContent = 'Число не входит в интервал.';
             document.getElementById('userGuess').value = '';
             document.getElementById('userGuess').focus();
         } else if (userGuess < secretNumber) {
@@ -100,5 +100,7 @@ document.getElementById('restart').addEventListener('click', function() {
     newParagraph.className = 'text-secondary m-0 fst-italic';
     newParagraph.textContent = 'пусто';
     document.getElementById('history').innerHTML = '';
-    document.getElementById('history').appendChild(newParagraph);
+    if(!document.getElementById('historyDel')) {
+        document.getElementById('history').appendChild(newParagraph);
+    }
 })
