@@ -10,8 +10,8 @@ function handleStartGame() {
     
     if (isNaN(A) || isNaN(B) || A >= B) {
         document.getElementById('warningStart').textContent = 'Пожалуйста, введите корректные мин. и макс. значения.';
-        A = '';
-        B = '';
+        document.getElementById('rangeA').value = '';
+        document.getElementById('rangeB').value = '';
         return;
     }
     
