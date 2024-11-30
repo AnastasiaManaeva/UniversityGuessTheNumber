@@ -105,7 +105,8 @@ body {
 #userGuess,
 #warningGame,
 #feedback,
-#attemptsLeft {
+#attemptsLeft,
+#warningStart {
     font-size: calc(0.325rem + 0.9vw); /* 16px */
 }
 
@@ -123,7 +124,8 @@ body {
     #userGuess,
     #warningGame,
     #feedback,
-    #attemptsLeft {
+    #attemptsLeft,
+    #warningStart {
         font-size: 1rem; /* 16px */
     }
 
@@ -217,14 +219,31 @@ body {
         max-width: 340px;
     }
     .titleMain {
-        font-size: 20px;
+        font-size: 1.375rem;
     }
     .inputs {
         font-size: 0.87rem;
     }
 
+    #interval,
+    .historyTitle,
+    .rules,
+    #restart,
+    #submitGuess,
+    #userGuess,
+    #warningGame,
+    #feedback,
+    #attemptsLeft,
+    #warningStart {
+        font-size: 0.75rem;
+    }
+    #historyDel,
+    #history li {
+        font-size: 0.625rem;
+    }
+
     #startGame {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .titleMain div {
         gap: 0 !important;
