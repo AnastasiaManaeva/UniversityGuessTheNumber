@@ -12,6 +12,7 @@ function handleStartGame() {
         document.getElementById('warningStart').textContent = 'Пожалуйста, введите корректные мин. и макс. значения.';
         document.getElementById('rangeA').value = '';
         document.getElementById('rangeB').value = '';
+        console.log(document.getElementById('rangeA').value);
         return;
     }
     
