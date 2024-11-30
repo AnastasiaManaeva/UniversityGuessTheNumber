@@ -10,6 +10,8 @@ function handleStartGame() {
     
     if (isNaN(A) || isNaN(B) || A >= B) {
         document.getElementById('warningStart').textContent = 'Пожалуйста, введите корректные мин. и макс. значения.';
+        A = '';
+        B = '';
         return;
     }
     
@@ -50,6 +52,7 @@ function handleGuess() {
 
     if (isNaN(userGuessValue)) {
         document.getElementById('warningGame').textContent = 'Пожалуйста, введите число.';
+        userGuess.focus();
         return;
     } else {
         document.getElementById('warningGame').textContent = '';
